@@ -19,7 +19,7 @@ To run this module in the terminal:
 
 node bamazonCustomer.js
 
-![Customer screenshot](./assets/images/Customerscreenshot.jpg)
+![Customer screenshot](/assets/images/Customerscreenshot.JPG)
 
 
 
@@ -37,5 +37,5 @@ To run this module in the terminal:
 
 node bamazonManager.js
 
-![Manager screenshot](./assets/images/Managerscreenshot.jpg)
+![Manager screenshot](/assets/images/Managerscreenshot.JPG)
 

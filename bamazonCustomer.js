@@ -14,8 +14,9 @@ var connection = mysql.createConnection({
   // Root is default username.
   user: "root",
   // Password is empty string.
-  password: "",
-  database: "Bamazon_db"
+  password: "Bluedoor#90"
+  ,
+  database: "bamazonDB"
 });
 
 
@@ -126,43 +127,7 @@ var completePurchase = function(availableStock, price, productSales, productDepa
 		// Display the total price for that purchase.
 		console.log("You're mythical payment has been received in the amount of : " + totalPrice);
 
-		// Updates department revenue based on purchase.
-		updateDepartmentRevenue(updatedProductSales, productDepartment);
-		// Displays products so user can make a new selection.
+		
 	});
 };
 
-// Updates total sales for department after completed purchase.
-var updateDepartmentRevenue = function(updatedProductSales, productDepartment) {
-
-	// Query database for total sales value for department.
-	var query = "Select total_sales FROM departments WHERE ?";
-	connection.query(query, { department_name: productDepartment}, function(err, res) {
-
-		if (err) throw err;
-
-		var departmentSales = res[0].total_sales;
-
-		var updatedDepartmentSales = parseInt(departmentSales) + parseInt(updatedProductSales);
-
-		// Completes update to total sales for department.
-		completeDepartmentSalesUpdate(updatedDepartmentSales, productDepartment);
-	});
-};
-
-// Completes update to total sales for department on database.
-var completeDepartmentSalesUpdate = function(updatedDepartmentSales, productDepartment) {
-
-	var query = "UPDATE departments SET ? WHERE ?";
-	connection.query(query, [{
-		total_sales: updatedDepartmentSales
-	}, {
-		department_name: productDepartment
-	}], function(err, res) {
-
-		if (err) throw err;
-
-		// Displays products so user can choose to make another purchase.
-		displayProducts();
-	});
-};

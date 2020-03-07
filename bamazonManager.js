@@ -15,8 +15,8 @@ var connection = mysql.createConnection({
   // Root is default username.
   user: "root",
   // Password is empty string.
-  password: "",
-  database: "Bamazon_db"
+  password: "Bluedoor#90",
+  database: "bamazonDB"
 });
 
 // If connection doesn't work, throws error, else...

@@ -1,18 +1,35 @@
 # bamazon
-Bamazon homework
-Bamazon is an Amazon-like storefront which utilizes MySQL and node.js. The app will take in orders from customers and deplete stock from the store's inventory.
+Bamazon uses some third-party node modules, has it's own modules, and connects to a mysql database to store and retrieve product and department information.
 
-Bamazon Customer View
-Running 'bamazonCustomer.js` will first display all of the items available for sale. This will include the ids, names, prices of products for sale and the stock quantity.
+Third-party Node Modules
+Bamazon uses these node modules: console.table, inquirer, mysql.
 
-The app will then prompt users with two messages.
+They are all dependencies in the package.json, so just run:
 
-The first will ask for the ID of the product that they would like to buy.
-The second message will ask how many units of the product they would like to buy.
-Once the customer has placed the order, the application will check if the store has sufficient product items to meet the customer's request.
+npm install
 
-If not, the app will log the phrase Insufficient quantity!, and prevent the order from going through.
-The app will require npm inquirer and npm mysql.
+Customer Module
+The customer module lets users select a product to purchase, enter the number of items they wish to purchase, and then complete the purchase.
 
-Screenshot Images
+The complete purchase process shows how much the total cost is (based on number of items).
+
+The customer module also updates to the total sales for a department, based on the purchased product's department.
+
+To run this module in the terminal:
+
+node bamazonCustomer.js
+
+![Customer screenshot](/assets/images/Customerscreenshot.jpg)
+Manager Module
+The manager module lets managers view the list of products, view low inventory, add inventory, and add products.
+
+As part of adding a product, if the department doesn't exist, it will get added automatically, so the manager doesn't have to worry about it.
+
+New products and new departments appear in the products and departments tables.
+
+To run this module in the terminal:
+
+node bamazonManager.js
+
+Sc![Manager screenshot](/assets/images/Managerscreenshot.jpg)
 

@@ -13,7 +13,7 @@ The customer module lets users select a product to purchase, enter the number of
 
 The complete purchase process shows how much the total cost is (based on number of items).
 
-The customer module also updates to the total sales for a department, based on the purchased product's department.
+
 
 To run this module in the terminal:
 

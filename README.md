@@ -19,7 +19,13 @@ To run this module in the terminal:
 
 node bamazonCustomer.js
 
-![Customer screenshot](/assets/images/Customerscreenshot.jpg)
+![Customer screenshot]("./assets/images/Customerscreenshot.jpg")
+
+
+
+
+
+
 Manager Module
 The manager module lets managers view the list of products, view low inventory, add inventory, and add products.
 
@@ -31,5 +37,5 @@ To run this module in the terminal:
 
 node bamazonManager.js
 
-Sc![Manager screenshot](/assets/images/Managerscreenshot.jpg)
+![Manager screenshot]("./assets/images/Managerscreenshot.jpg")
 
